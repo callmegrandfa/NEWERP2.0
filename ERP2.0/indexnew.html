@@ -316,17 +316,18 @@
                     <div class="row">
                         <div class="col-md-12">
                         <!--页签  -->
-                            <ul>
-                                <li v-for="(item,index) in pageLabelBox"><router-link :to="'/' + item.address">{{item.name}}</router-link><i class="fa fa-close" @click="closeTab" :data-index="index"></i></li>                      
-                                
-                            </ul>
-                                <!-- <router-link to="/home">Go to home</router-link>
-                                <router-link to="/car">Go to car</router-link> -->
-                                <keep-alive>
-                                    <router-view></router-view>
-                                </keep-alive>
-                                
-                    
+                            <div class="tabbable tabbable-tabdrop">
+                                <ul class="nav nav-pills">                                      
+                                    <li v-for="(item,index) in pageLabelBox" :data-index="index">
+                                        <a href="#tab16" data-toggle="tab" aria-expanded="false"><font style="vertical-align: inherit;">{{item.name}}</font></a>
+                                    </li>
+                                </ul>
+                                <div class="tab-content">
+                                    <div class="tab-pane"  v-for="(item,index) in pageLabelBox" :data-index="index">
+                                        <p><font style="vertical-align: inherit;"> {{item.name}} </font></p>
+                                    </div>
+                                </div>
+                            </div>                                                   
                         </div>
                     </div>
                     <!-- 写入内容结束 -->
