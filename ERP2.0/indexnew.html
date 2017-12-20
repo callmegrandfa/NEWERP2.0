@@ -18,7 +18,8 @@
         <link href="../assets/global/plugins/bootstrap/css/bootstrap.min.css" rel="stylesheet" type="text/css" />
         <link href="../assets/layouts/layout2/css/layout.min.css" rel="stylesheet" type="text/css" />
         <link href="../assets/layouts/layout2/css/themes/blue.min.css" rel="stylesheet" type="text/css" id="style_color" />
-        <link href="../assets/layouts/layout2/css/indexNew.css" rel="stylesheet" type="text/css">        
+        <link href="../assets/layouts/layout2/css/indexNew.css" rel="stylesheet" type="text/css"> 
+        <link href="../assets/layouts/layout2/css/shortData.css" rel="stylesheet" type="text/css">         
     </head>
     <body class="page-header-fixed page-sidebar-closed-hide-logo page-container-bg-solid">
         <div id="app">
@@ -75,11 +76,11 @@
         <div class="clearfix"> </div>
         <!-- 内容开始 -->
         <div class="page-container">
-            <div class="page-sidebar-wrapper">
-                 <div class="page-sidebar navbar-collapse collapse">
+            <!-- <div class="page-sidebar-wrapper"> -->
+                 <!-- <div class="page-sidebar navbar-collapse collapse"> -->
                      <!-- 左侧列表开始 -->
-                     <ul class="page-sidebar-menu  page-header-fixed page-sidebar-menu-hover-submenu" data-keep-expanded="false" data-auto-scroll="true" data-slide-speed="200">
-                            <li class="nav-item" v-for="list in lists">    
+                     <!-- <ul class="page-sidebar-menu  page-header-fixed page-sidebar-menu-hover-submenu" data-keep-expanded="false" data-auto-scroll="true" data-slide-speed="200"> -->
+                            <!-- <li class="nav-item" v-for="list in lists">    
                                 <a :href="list.url" class="nav-link nav-toggle">
                                     <span class="title">{{list.firstLevel}}</span>
                                     <span class="arrow"></span>
@@ -98,18 +99,18 @@
                                     </li>
                                 </ul>
                             </li>
-                        </ul>
+                        </ul> -->
                         <!--左侧列表结束 -->
-                </div>      
-            </div>
+                <!-- </div>       -->
+            <!-- </div> -->
             <!-- 内容开始 -->
             <div class="page-content-wrapper">
                 <!-- BEGIN CONTENT BODY -->
-                <div class="page-content" >
+                <!-- <div class="page-content" >
                     <div class="row">
-                        <div class="col-md-12">
+                        <div class="col-md-12"> -->
                            <!--页签  -->
-                           <div class="tabbable tabbable-tabdrop">
+                           <!-- <div class="tabbable tabbable-tabdrop">
                                 <ul class="nav nav-pills">                                       
                                     <li v-for="(item,index) in pageLabelBox" :class="{active : isActive}">
                                         <a href="#tab16" data-toggle="tab" aria-expanded="false" :data-index="index"  @click="show">{{item.name}}</a>
@@ -123,8 +124,50 @@
                             </div>         
                         </div>
                     </div>
+                </div> -->
+                <!-- END CONTENT BODY -->    
+                
+                <!-- 基础资料-短开始 -->
+                <div class="short-basic-data container-fluid">
+                    <!-- 搜索框部分开始 -->
+                    <div class="search-component row">
+                        <div class="add-btn green-btn col-md-1">
+                            <span>新增</span>
+                        </div>
+                    
+                        <div class="import-btn green-btn col-md-1">
+                            <span>导入</span>
+                        </div>
+                    
+                        <div class="search-input col-md-5">
+                            <input type="text" class="form-control" placeholder="编码/名称..."/>
+                            
+                            <div class="search-btn">
+                                <span>搜索</span>
+                            </div>
+
+                            <div class="high-search">
+                                    <span>高级搜索</span>
+                            </div>
+                        </div>
+                    
+                        <div class="gray-btn col-md-1">
+                            <span>导出</span>
+                        </div>
+                    
+                        <div class="gray-btn col-md-1">
+                            <span>打印</span>
+                        </div>
+                    </div>
+                    <!-- 搜索框部分结束 -->
+
+                    <!-- 基础资料表单开始 -->
+                    <div>
+                        
+                    </div>
+                    <!-- 基础资料表单结束 -->
                 </div>
-                <!-- END CONTENT BODY -->                       
+                <!-- 基础资料短-结束 -->
             </div>
             <!-- 内容开始 -->     
         </div>
