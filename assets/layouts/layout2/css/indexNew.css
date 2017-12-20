@@ -26,6 +26,19 @@
  .page-header.navbar .search-form .input-group .input-group-btn{
     height: 36px;
 }
+.page-sidebar .page-sidebar-menu .sub-menu li{
+    cursor: pointer;
+}
+.form-control {
+    -webkit-box-shadow: inset 0 0 0 #f2f2f2;
+    box-shadow: inset 0 0 0 #f2f2f2;
+    -webkit-transition: border-color ease-in-out 0;
+    -o-transition: border-color ease-in-out 0;
+    transition: border-color ease-in-out 0;
+}
+.page-header-fixed .page-container{
+    background-color: #26344b;
+}
 .page-header.navbar .search-form.search-form-expanded{
     margin-top: 19px;
     background-color: #f2f2f2;
@@ -38,6 +51,7 @@
 .page-header.navbar .top-menu .navbar-nav>li.dropdown>.dropdown-toggle>i.fa-commenting-o{
     font-size: 26px;
     color: #000;
+    margin-top: -6px;
 }
 .page-header.navbar .search-form .input-group .input-group-btn .btn.submit{
     margin-left: 0;
@@ -90,6 +104,9 @@ i.userQuestion{
     display: block;
     margin-top: 12px;
 }
+.page-header.navbar .top-menu .navbar-nav>li.dropdown>.dropdown-toggle:last-child{
+    padding-right: 16px!important;
+}
 .page-header.navbar .page-logo>a small{
     font-weight: 400;
     font-size: 12px;
@@ -104,7 +121,7 @@ i.userQuestion{
 
 
 @media (min-width: 992px){
-    .page-sidebar-closed.page-sidebar-closed-hide-logo.page-boxed .page-header.navbar .page-logo{
+    .page-sidebar-closed.page-sidebar-closed-hide-logo .page-header.navbar .page-logo{
         width: 195px;
         padding-left: 20px;
         padding-right: 20px;
@@ -199,7 +216,6 @@ i.userQuestion{
     float: left;
     list-style: none;
     margin-right: 10px;
-    padding: 5px 15px;
     background-color: #fff;
 }
 .page-content ul li a{
