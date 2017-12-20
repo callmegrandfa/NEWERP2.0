@@ -1,0 +1,96 @@
+<!-- 详情页面 -->
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+</head>
+<body>
+<form class="detailForm">                      
+    <div class="row">
+        <fieldset>
+            <legend>公司信息</legend>
+            <div class="col-md-4 form-group"><label for="code">编码</label><input type="text" id="code" class="form-control"></div>
+            <div class="col-md-4 form-group"><label for="name">名称</label><input type="text" id="name" class="form-control"></div>
+            <div class="col-md-4 form-group"><label for="totalName">全称</label><input type="text" id="totalName" class="form-control"></div>
+            <div class="col-md-4 form-group"><label>上级业务单元</label><select class="form-control"><option>恒康</option></select></div>
+            <div class="col-md-4 form-group"><label>启用月份</label><select class="form-control"><option>1月</option></select></div>
+            <div class="col-md-4 form-group"><label>本位币种</label><select class="form-control"><option>人民币</option></select></div>
+            <div class="col-md-4 form-group"><label>所属公司</label><select class="form-control"><option>恒康</option></select></div>
+            <div class="col-md-4 form-group"><label>联系人</label><input type="text" class="form-control"></div>
+            <div class="col-md-4 form-group"><label>电话</label><input type="text" class="form-control"></div>
+            <div class="col-md-4 form-group"><label>地址</label><input type="text" class="form-control"></div>
+            <div class="col-md-4 form-group"><label>备注</label><input type="text" class="form-control"></div>
+            <div class="col-md-4 form-group"><label>启用状态</label><select class="form-control"><option value="">已启用</option></select></div>
+        </fieldset>       
+    </div>
+    <div class="row">
+        
+        <fieldset>
+            <legend>组织类型</legend>
+            <div class="col-md-4 form-group"><label class="checkbox-inline"><input type="checkbox">公司</label></div>
+            <div class="col-md-4 form-group"><label class="checkbox-inline"><input type="checkbox">财务</label></div>
+            <div class="col-md-4 form-group"><label class="checkbox-inline"><input type="checkbox">业务</label></div>
+        </fieldset>  
+        
+    </div>
+    <div class="row">
+        
+            <fieldset>
+                <legend>审计信息</legend>
+                <div class="col-md-4 form-group"><label>创建人</label><input type="text" class="form-control"></div>
+                <div class="col-md-4 form-group"><label>创建时间</label><input type="text" class="form-control"></div>
+                <div class="col-md-4 form-group"><label>修改人</label><input type="text" class="form-control"></div>                          
+                <div class="col-md-4 form-group"><label>修改时间</label><input type="text" class="form-control"></div>
+                <div class="col-md-4 form-group"><label>启用日期</label><input type="text" class="form-control"></div>
+                <div class="col-md-4 form-group"><label>封存日期</label><input type="text" class="form-control"></div>                           
+                <div class="col-md-4 form-group"><label>封存人</label><input type="text" class="form-control"></div>                                   
+            </fieldset>  
+            
+    </div>
+                                    
+            
+    <div class="tabbable tabbable-tabdrop row">
+        <fieldset>
+            <legend>组织详情</legend>
+            <ul class="nav nav-pills col-md-12">                                       
+                <li class="active"><a href="#a" data-toggle="tab" aria-expanded="false">公司</a></li>
+                <li><a href="#b" data-toggle="tab" aria-expanded="false">财务</a></li>
+                <li><a href="#c" data-toggle="tab" aria-expanded="false">业务</a></li>
+            </ul>
+            <div class="tab-content col-md-12">                                   
+                <div class="tab-pane  active" id="a">
+                        <div class="col-md-12 form-group">                                                        
+                            <label class="checkbox-inline"><input type="checkbox">集团公司</label>
+                        </div>
+                        <div class="col-md-4 form-group">
+                                <label>上级公司</label>
+                                <select class="form-control">
+                                    <option>恒康1</option>
+                                    <option>恒康2</option>
+                                </select>
+                        </div>
+                        <div class="col-md-4 form-group">
+                            <label>法人代表</label>
+                            <input type="text" class="form-control">
+                        </div>
+                        <div class="col-md-4 form-group">
+                            <label>启用状态</label>
+                            <select class="form-control">
+                                <option>已启用</option>
+                                <option>未启用</option>
+                            </select>
+                        </div>                       
+                </div>
+                <div class="tab-pane " id="b">
+                        财务
+                </div>
+                <div class="tab-pane " id="c">
+                        业务
+                </div>
+            </div>
+        </fieldset>     
+    </div>                                           
+</form>
+</body>
+</html>
