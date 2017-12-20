@@ -26,6 +26,9 @@
  .page-header.navbar .search-form .input-group .input-group-btn{
     height: 36px;
 }
+.page-sidebar .page-sidebar-menu .sub-menu li{
+    cursor: pointer;
+}
 .form-control {
     -webkit-box-shadow: inset 0 0 0 #f2f2f2;
     box-shadow: inset 0 0 0 #f2f2f2;
