@@ -1,9 +1,9 @@
 const app =new Vue({
     el:'#app',
-    router,
     data(){
         return{
-              pageLabelBox:[{'name':'首页','address':'home'}],//存储页签    
+              isActive:false,
+              pageLabelBox:[{name:"首页",address:"home"}],//存储页签    
               lists:[
                   {firstLevel:'系统管理',
                   url:'',
@@ -867,10 +867,10 @@ const app =new Vue({
                 var address=e.target.getAttribute('data-address');
                 var name=e.target.getAttribute('data-name');
                 var item={'name':name,'address':address};
-                var flag=false;
+                var flag=true;
                 // 如果页签未存入pageLabelBox，则存入
                 var pageLabelBox=this._data.pageLabelBox;
-                var len=pageLabelBox.length;        
+                var len=pageLabelBox.length;
                 for(var i=0;i<len;i++){
                     var boxItem=this._data.pageLabelBox[i];
                     if(name==this._data.pageLabelBox[i].name){
@@ -878,16 +878,30 @@ const app =new Vue({
                         break;
                     }else{flag=true;}                 
                 };
+
                 if(flag==true){
                     this._data.pageLabelBox.push(item);
                     flag=false;
                 };
-                //console.log(this._data.pageLabelBox);
+                
             },
             closeTab:function(e){//关闭页签
                 var index=e.target.getAttribute('data-index');
                 var pageLabelBox=this._data.pageLabelBox;
                 pageLabelBox.splice(index,1)
+            },
+            show:function(e){
+                var pageLabelBox=this._data.pageLabelBox;
+                var len=pageLabelBox.length;
+                var index=e.target.getAttribute('data-index');
+                for(var i=0;i<len;i++){
+                    var boxItem=this._data.pageLabelBox[i];
+                    if(index==i){
+                        
+                        break;
+                    }else{this._data.isActive=false;}
+                };
+                
             }
          }
 })
