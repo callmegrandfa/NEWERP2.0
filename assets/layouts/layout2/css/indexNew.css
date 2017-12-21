@@ -29,13 +29,7 @@
 .page-sidebar .page-sidebar-menu .sub-menu li{
     cursor: pointer;
 }
-.form-control {
-    -webkit-box-shadow: inset 0 0 0 #f2f2f2;
-    box-shadow: inset 0 0 0 #f2f2f2;
-    -webkit-transition: border-color ease-in-out 0;
-    -o-transition: border-color ease-in-out 0;
-    transition: border-color ease-in-out 0;
-}
+
 .page-header-fixed .page-container{
     background-color: #26344b;
 }
@@ -206,38 +200,6 @@ i.userQuestion{
 }
 .page-sidebar .page-sidebar-menu li>a>.arrow:before, .page-sidebar-closed.page-sidebar-fixed .page-sidebar:hover .page-sidebar-menu li>a>.arrow:before{
     margin-top: -46px;
-}
-.page-content ul{
-    width: 100%;
-    height: 29px;       
-}
-.page-content ul li{
-    position: relative;
-    float: left;
-    list-style: none;
-    margin-right: 10px;
-    background-color: #fff;
-}
-.page-content ul li a{
-    color: #000;
-    font-size: 12px;
-}
-.page-content ul li a:focus,.page-content ul li a:hover{
-    text-decoration: none;
-}
-.page-content ul li.indexBtn a{
-    color: #17C4BB;
-}
-.page-content ul li i{
-    position: absolute;
-    top: -4px;
-    right: -4px; 
-}
-.page-content ul>li:first-child i{
-    display: none;
-}
-.page-content ul li i:hover{
-    color: #17C4BB;
 }
 .router-active{
     color: #17C4BB!important;
