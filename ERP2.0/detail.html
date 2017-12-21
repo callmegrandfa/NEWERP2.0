@@ -1,0 +1,205 @@
+<!-- 详情页面 -->
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+    <link href="../assets/global/plugins/bootstrap/css/bootstrap.min.css" rel="stylesheet" type="text/css" />
+    <style>
+            body{
+                background-color: #eef1f5;
+                padding: 0 20px;
+            }
+            .detailForm .row{
+                margin-bottom: 17px;
+            }
+            .detailForm .operationBtn .pull-right,.detailForm .operationBtn .btn-info{
+                margin-right: 10px;
+            }
+            .detailForm .bgcolor{
+                background-color: #fff;
+                margin-top: 5px;
+                margin-bottom: 5px;
+                height: 34px;
+                overflow: hidden;
+            }
+            .detailForm .chooseType{
+                background-color: transparent;
+            }
+            .detailForm .bgcolor label{
+               display: block;
+               width: 84px;
+               height: 100%;
+               float: left;
+               color: grey;
+               font-weight: normal;
+               margin-top: 8px;
+            }
+            .detailForm .bgcolor .formComponent[disabled]{
+                background-color: #fff;
+            }
+            .detailForm .bgcolor .formComponent{
+                padding-left: 10px;
+               display: block;
+               width: 68%;
+               height: 34px;;
+               float: left;
+               border: none;
+            }
+            .detailForm .bgcolor .formComponent:focus{
+                outline: none;
+            }          
+           
+            /* 下拉列表 */
+            .detailForm .panel{
+                margin-bottom: 0;
+                background-color: #eef1f5;
+                border: none;
+                border-radius: 0;
+                -webkit-box-shadow: 0 0 0 #fff;
+                box-shadow: 0 0 0 #fff;
+            }
+            .detailForm .panel .panel-heading{
+                overflow: hidden;
+                padding: 0; 
+                border-bottom: none;
+                border-top-right-radius: 0;
+                border-top-left-radius: 0; 
+            }
+            .detailForm .panel .panel-heading .panel-title{
+                overflow: hidden;
+                font-size: inherit;
+            }
+            .detailForm .panel .panel-collapse .panel-body{
+                padding: 0;
+            }
+
+    </style>
+</head>
+<body>
+
+
+                <div class="panel panel-default">
+                  <div class="panel-heading" role="tab" id="headingTwo">
+                    <div class="panel-title">
+                      
+                    </div>
+                  </div>
+                  <div id="collapseTwo" class="panel-collapse collapse in" role="tabpanel" aria-labelledby="headingTwo">
+                    <div class="panel-body">
+                      Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.
+                    </div>
+                  </div>
+                </div>
+                <div class="panel panel-default">
+                  <div class="panel-heading" role="tab" id="headingThree">
+                    <h4 class="panel-title">
+                      <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                            <span class="glyphicon glyphicon-chevron-down" aria-hidden="true"></span>
+                      </a>
+                    </h4>
+                  </div>
+                  <div id="collapseThree" class="panel-collapse collapse in" role="tabpanel" aria-labelledby="headingThree">
+                    <div class="panel-body">
+                      Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.
+                    </div>
+                  </div>
+                </div>
+             
+    <form class="detailForm">
+            
+        <div class="row operationBtn">
+            <button class="btn btn-info">保存</button> 
+            <button class="btn btn-info">保存并新增</button>
+            <button class="btn btn-info">保存并审核</button>
+            <button class="btn btn-info">取消</button>                  
+        </div>                  
+        <div class="row">                                  
+            <!--公司信息  -->
+            <div class="col-md-1"><h4>公司信息</h4></div>
+            <div class="col-md-10">   
+                <div class="panel">
+                    <div class="panel-heading" role="tab" id="info">
+                        <div class="panel-title">
+                            <div class="col-md-3"><div class="bgcolor col-md-12"><label>编码</label><input type="text" class="formComponent" value="PO1711060111111-002" placeholder="请填入编码"></div></div>
+                            <div class="col-md-3"><div class="bgcolor col-md-12"><label>名称</label><input type="text" class="formComponent" placeholder="请录入手工单号"></div></div>
+                            <div class="col-md-3"><div class="bgcolor col-md-12"><label>全称</label><input type="text" class="formComponent" placeholder="请选择仓库"></div></div>
+                            <div class="col-md-3"><div class="bgcolor col-md-12"><label>上级业务单元</label><select class="formComponent"><option>恒康</option></select></div></div>
+                        </div>
+                    </div>
+                    <div id="collapseOne" class="panel-collapse collapse in" role="tabpanel" aria-labelledby="info">
+                        <div class="panel-body">
+                            <div class="col-md-3"><div class="bgcolor col-md-12"><label>启用月份</label><select class="formComponent"><option>1月</option></select></div></div>
+                            <div class="col-md-3"><div class="bgcolor col-md-12"><label>本位币种</label><select class="formComponent"><option>RMB</option></select></div></div>
+                            <div class="col-md-3"><div class="bgcolor col-md-12"><label>所属公司</label><select class="formComponent"><option>30</option></select></div></div>
+                            <div class="col-md-3"><div class="bgcolor col-md-12"><label>联系人</label><input type="text" class="formComponent" value="lomen" placeholder="请填入联系人"></div></div>
+                            <div class="col-md-3"><div class="bgcolor col-md-12"><label>电话</label><input type="text" class="formComponent" value="无" placeholder="请填入电话"></div></div>
+                            <div class="col-md-3"><div class="bgcolor col-md-12"><label>地址</label><input type="text" class="formComponent" value="无" placeholder="请填入地址"></div></div>
+                            <div class="col-md-3"><div class="bgcolor col-md-12"><label>备注</label><input type="text" class="formComponent" value="无" placeholder="备注"></div></div>
+                            <div class="col-md-3"><div class="bgcolor col-md-12"><label>启用状态</label><select class="formComponent"><option value="">已启用</option></select></div></div>  
+                        </div>
+                    </div>
+                </div>    
+            </div> 
+            <div class="col-md-1">
+                <a role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                    收起<span class="glyphicon glyphicon-chevron-down" aria-hidden="true"></span>
+                </a>
+            </div>                                                                          
+        </div> 
+        <!--组织类型  -->
+        <div class="row">
+            <div class="col-md-1"><h4>组织类型</h4></div>
+            <div class="col-md-10">
+                <div class="col-md-3">
+                    <div class="bgcolor col-md-12 chooseType">
+                        <label class="checkbox-inline"><input type="checkbox">公司</label>
+                        <label class="checkbox-inline"><input type="checkbox">财务</label>
+                        <label class="checkbox-inline"><input type="checkbox">业务</label>
+                    </div>
+                </div>              
+            </div>            
+        </div> 
+        <!--基础信息  -->  
+        <div class="row">
+            <div class="col-md-1"><h4>基础信息</h4></div>
+            <div class="col-md-10">
+                <div class="col-md-3"><div class="bgcolor col-md-12"><label>版本号</label><input type="text" class="formComponent" value="PO1711063111111-002" disabled></div></div>
+                <div class="col-md-3"><div class="bgcolor col-md-12"><label>版本开始日期</label><input type="text" class="formComponent" placeholder="请录入开始日期"></div></div>
+                <div class="col-md-3"><div class="bgcolor col-md-12"><label>版本结束日期</label><input type="text" class="formComponent" placeholder="请录入结束日期"></div></div>            
+            </div> 
+        </div>  
+        <!--审计信息  -->           
+        <!-- <div class="row">
+            <div class="col-md-1"><h4>审计信息</h4></div>
+            <div class="col-md-11">
+                <div class="col-md-3"><div class="bgcolor col-md-12"><label>创建人</label><input type="text" class="formComponent" value="张三" disabled></div></div>
+                <div class="col-md-3"><div class="bgcolor col-md-12"><label>创建时间</label><input type="text" class="formComponent" value="17.11.10" disabled></div></div>
+                <div class="col-md-3"><div class="bgcolor col-md-12"><label>修改人</label><input type="text" class="formComponent" value="张三" disabled></div></div>                 
+                <div class="col-md-3"><div class="bgcolor col-md-12"><label>修改时间</label><input type="text" class="formComponent" value="17.12.12" disabled></div></div>
+                <div class="col-md-3"><div class="bgcolor col-md-12"><label>启用日期</label><input type="text" class="formComponent" value="17.12.12" disabled></div></div>
+                <div class="col-md-3"><div class="bgcolor col-md-12"><label>封存日期</label><input type="text" class="formComponent" value="17.12.12" disabled></div></div>                           
+                <div class="col-md-3"><div class="bgcolor col-md-12"><label>封存人</label><input type="text" class="formComponent" value="李四" disabled></div></div>                                   
+            </div>             
+        </div>-->
+        <!-- 公司业务财务bootTab标签页 -->
+        <div>
+            <ul class="nav nav-tabs" role="tablist">
+                <li role="presentation" class="active"><a href="#company" aria-controls="company" role="tab" data-toggle="tab">公司</a></li>
+                <li role="presentation"><a href="#business" aria-controls="business" role="tab" data-toggle="tab">业务</a></li>
+                <li role="presentation"><a href="#finance" aria-controls="finance" role="tab" data-toggle="tab">财务</a></li>
+            </ul>
+            <div class="tab-content">
+                <div role="tabpanel" class="tab-pane active" id="company">
+
+                </div>
+                <div role="tabpanel" class="tab-pane" id="business"></div>
+                <div role="tabpanel" class="tab-pane" id="finance"></div>
+            </div>
+        
+        </div>                                                                
+    </form>
+        <script src="../assets/global/plugins/jquery.min.js" type="text/javascript"></script>
+        <script src="../assets/global/plugins/bootstrap/js/bootstrap.min.js" type="text/javascript"></script>
+</body>
+</html>
