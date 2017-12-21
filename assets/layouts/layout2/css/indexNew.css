@@ -212,3 +212,8 @@ body.page-boxed,body{
     background-color: #fff!important;
 }
 }
+
+.el-table__row input[disabled]{
+    background: none;
+    border: none;
+}
