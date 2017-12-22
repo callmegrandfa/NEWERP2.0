@@ -95,21 +95,27 @@ const vm=new Vue({
 				    ifAllow:true,
 				    updateDate:'2017.12.20'
 				}],
-				isEdit:-1,//表格中input编辑
-				ifUpdate:true,//编辑按钮（是否可见）
-				ifSave:false,//保存按钮（是否可见）
+			isEdit:-1,//表格中input编辑
+			ifUpdate:-1,//编辑按钮（是否可见）
+			//ifSave:-1,//保存按钮（是否可见）
+			pageIndex:-1,//分页的当前页码
+			totalPage:20,//当前分页总数
 			
 		}
 		
 	},
 	methods:{
-		handleEdit:function(index){
+		handleEdit:function(index){//表格内编辑操作
 			this.isEdit=index;//当选中行的索引值与列表中索引值相同，则编辑！
-			//this.ifUpdate=false;
-			//this.ifSave=true
 		},
-		handleDelete:function(index){
+		handleDelete:function(index){//表格内删除操作
 			this.tableData.splice(index,1);
+		},
+		finishEdit: function(index) {//表格内编辑完成事件
+			this.isEdit=-1;
+		},
+		handleCurrentChange:function(val){//获取当前页码
+			this.pageIndex=val;
 		},
 		searchShow:function(){
 			let self = this;
