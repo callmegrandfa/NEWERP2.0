@@ -574,8 +574,7 @@ const app =new Vue({
                               ]
                           }
                       }]
-                  },
-                  {firstLevel:'系统管理',
+                  },{firstLevel:'系统管理',
                   url:'',
                   secondLevel:[
                       {
@@ -860,9 +859,73 @@ const app =new Vue({
                           }
                       }]
                   }],
-                  isEdit:-1,//表格中input编辑
-                  ifUpdate:true,//编辑按钮（是否可见）
-                  ifSave:false,//保存按钮（是否可见）
+                  tableData: [{
+                    sequence: '1',
+                    planCode: 'A001',
+                    planName: '哈哈',
+                    remark:'12',
+                    ifAllow:true,
+                    updateDate:'2017.12.20'
+                    }, {
+                        sequence: '2',
+                        planCode: 'A002',
+                        planName: '哈哈',
+                        remark:'1234',
+                        ifAllow:false,
+                        updateDate:'2017.12.20'
+                    }, {
+                        sequence: '3',
+                        planCode: 'A003',
+                        planName: '哈哈',
+                        remark:'faf',
+                        ifAllow:false,
+                        updateDate:'2017.12.20'
+                    }, {
+                        sequence: '4',
+                        planCode: 'A004',
+                        planName: '哈哈',
+                        remark:'fasdg',
+                        ifAllow:true,
+                        updateDate:'2017.12.20'
+                    }, {
+                        sequence: '5',
+                        planCode: 'A005',
+                        planName: '哈哈',
+                        remark:'fasdg',
+                        ifAllow:true,
+                        updateDate:'2017.12.20'
+                    }, {
+                        sequence: '6',
+                        planCode: 'A006',
+                        planName: '哈哈',
+                        remark:'fasdg',
+                        ifAllow:true,
+                        updateDate:'2017.12.20'
+                    }, {
+                        sequence: '7',
+                        planCode: 'A007',
+                        planName: '哈哈',
+                        remark:'fasdg',
+                        ifAllow:true,
+                        updateDate:'2017.12.20'
+                    }, {
+                        sequence: '8',
+                        planCode: 'A008',
+                        planName: '哈哈',
+                        remark:'fasdg',
+                        ifAllow:true,
+                        updateDate:'2017.12.20'
+                    }, {
+                        sequence: '9',
+                        planCode: 'A009',
+                        planName: '哈哈',
+                        remark:'fasdg',
+                        ifAllow:true,
+                        updateDate:'2017.12.20'
+                    }],
+                    isEdit:-1,//表格中input编辑
+                    ifUpdate:true,//编辑按钮（是否可见）
+                    ifSave:false,//保存按钮（是否可见）
             
               }
          },

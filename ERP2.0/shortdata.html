@@ -63,17 +63,18 @@
             <!-- 基础资料表单开始 -->
             <div style="display:flex;align-items:flex-start;">
                 <div style="width: 15%;display:inline-block">
-                    <div class="tree-container">
-                        <ul>
-                            <li v-for='item in companyTree'>{{item.a}}
+                        <div class="tree-container">
                                 <ul>
-                                    <li v-for='items in item.a1'>{{items}}</li>
+                                    <li>Root node 1
+                                        <ul>
+                                            <li>Child node 1</li>
+                                            <li><a href="#">Child node 2</a></li>
+                                        </ul>
+                                    </li>
+                                    <li>Root node 2</li>
                                 </ul>
-                            </li>
-                        </ul>
-                    </div>
+                            </div>
                 </div>
-
                 <div style="width: 85%;display:inline-block">
                     <el-table :data="tableData" border style="width: 100%">
                         <el-table-column prop="sequence" label="序号" ></el-table-column>
@@ -175,7 +176,7 @@
 
                 <div class="search-num">
                     <input type="text" 
-                    class="form-control"
+                    class="form-control" 
                     placeholder="请输入查询单号..." 
                     style="width:80%">
                 </div>
@@ -357,6 +358,9 @@
             </div>
             <!-- 高級搜索結束 -->
 
+            <!-- 树形结构开始 -->
+            
+            <!-- 树形结构结束 -->
         </div>
         <!-- 基础资料短-结束 -->
 
