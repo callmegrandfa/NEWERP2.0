@@ -1,68 +1,9 @@
-const home={ template: '<p>home<p/>' }
-const catalog ={ template: '<p>catalog<p/>' }
-const setting ={ template: '<p>setting<p/>' }
-const accounting ={ template: '<p>accounting<p/>' }
-const period ={ template: '<p>period<p/>' }
-const Monetary ={ template: '<p>Monetary<p/>' }
-const rate ={ template: '<p>rate<p/>' }
-const Settlement ={ template: '<p>Settlement<p/>' }
-const information ={ template: '<p>information<p/>' }
-const category ={ template: '<p>category<p/>' }
-const cost ={ template: '<p>cost<p/>' }
-const item ={ template: '<p>item<p/>' }
-const infor ={ template: '<p>infor<p/>' }
-const account ={ template: '<p>account<p/>' }
-const payment ={ template: '<p>payment<p/>' }
-const plan ={ template: '<p>plan<p/>' }
-const clause ={ template: '<p>clause<p/>' }
-const pay ={ template: '<p>pay<p/>' }
-const Bureau ={ template: '<p>Bureau<p/>' }
-const template ={ template: '<p>template<p/>' }
-const print ={ template: '<p>print<p/>' }
-const file ={ template: '<p>file<p/>' }
-const Port ={ template: '<p>Port<p/>' }
-const basic ={ template: '<p>basic<p/>' }
-const code ={ template: '<p>code<p/>' }
-
-const routes = [
-    { path: '/', redirect: '/home' },
-    { path: '/home', component: home },
-    { path: '/catalog', component: catalog },
-    { path: '/setting', component: setting },
-    { path: '/accounting', component: accounting },
-    { path: '/period', component: period },
-    { path: '/Monetary', component: Monetary },
-    { path: '/rate', component: rate },
-    { path: '/Settlement', component: Settlement },
-    { path: '/information', component: information },
-    { path: '/category', component: category },
-    { path: '/cost', component: cost },
-    { path: '/item', component: item },
-    { path: '/infor', component: infor },
-    { path: '/account', component: account },
-    { path: '/payment', component: payment },
-    { path: '/plan', component: plan },
-    { path: '/Bureau', component: Bureau },
-    { path: '/clause', component: clause },
-    { path: '/pay', component: pay },
-    { path: '/template', component: template },
-    { path: '/print', component: print },
-    { path: '/file', component: file },
-    { path: '/Port', component: Port },
-    { path: '/basic', component: basic },
-    { path: '/code', component: code }
-   ]
-const router = new VueRouter({
-    linkActiveClass: 'router-active',
-    routes
-})  
-
 const app =new Vue({
     el:'#app',
-    router,
     data(){
         return{
-              pageLabelBox:[{'name':'首页','address':'home'}],//存储页签    
+              isActive:false,
+              pageLabelBox:[{name:"首页",address:"home"}],//存储页签    
               lists:[
                   {firstLevel:'系统管理',
                   url:'',
@@ -917,7 +858,74 @@ const app =new Vue({
                               ]
                           }
                       }]
-                  }]
+                  }],
+                  tableData: [{
+                    sequence: '1',
+                    planCode: 'A001',
+                    planName: '哈哈',
+                    remark:'12',
+                    ifAllow:true,
+                    updateDate:'2017.12.20'
+                    }, {
+                        sequence: '2',
+                        planCode: 'A002',
+                        planName: '哈哈',
+                        remark:'1234',
+                        ifAllow:false,
+                        updateDate:'2017.12.20'
+                    }, {
+                        sequence: '3',
+                        planCode: 'A003',
+                        planName: '哈哈',
+                        remark:'faf',
+                        ifAllow:false,
+                        updateDate:'2017.12.20'
+                    }, {
+                        sequence: '4',
+                        planCode: 'A004',
+                        planName: '哈哈',
+                        remark:'fasdg',
+                        ifAllow:true,
+                        updateDate:'2017.12.20'
+                    }, {
+                        sequence: '5',
+                        planCode: 'A005',
+                        planName: '哈哈',
+                        remark:'fasdg',
+                        ifAllow:true,
+                        updateDate:'2017.12.20'
+                    }, {
+                        sequence: '6',
+                        planCode: 'A006',
+                        planName: '哈哈',
+                        remark:'fasdg',
+                        ifAllow:true,
+                        updateDate:'2017.12.20'
+                    }, {
+                        sequence: '7',
+                        planCode: 'A007',
+                        planName: '哈哈',
+                        remark:'fasdg',
+                        ifAllow:true,
+                        updateDate:'2017.12.20'
+                    }, {
+                        sequence: '8',
+                        planCode: 'A008',
+                        planName: '哈哈',
+                        remark:'fasdg',
+                        ifAllow:true,
+                        updateDate:'2017.12.20'
+                    }, {
+                        sequence: '9',
+                        planCode: 'A009',
+                        planName: '哈哈',
+                        remark:'fasdg',
+                        ifAllow:true,
+                        updateDate:'2017.12.20'
+                    }],
+                    isEdit:-1,//表格中input编辑
+                    ifUpdate:true,//编辑按钮（是否可见）
+                    ifSave:false,//保存按钮（是否可见）
             
               }
          },
@@ -926,10 +934,10 @@ const app =new Vue({
                 var address=e.target.getAttribute('data-address');
                 var name=e.target.getAttribute('data-name');
                 var item={'name':name,'address':address};
-                var flag=false;
+                var flag=true;
                 // 如果页签未存入pageLabelBox，则存入
                 var pageLabelBox=this._data.pageLabelBox;
-                var len=pageLabelBox.length;        
+                var len=pageLabelBox.length;
                 for(var i=0;i<len;i++){
                     var boxItem=this._data.pageLabelBox[i];
                     if(name==this._data.pageLabelBox[i].name){
@@ -937,16 +945,31 @@ const app =new Vue({
                         break;
                     }else{flag=true;}                 
                 };
+
                 if(flag==true){
                     this._data.pageLabelBox.push(item);
                     flag=false;
                 };
-                //console.log(this._data.pageLabelBox);
+                
             },
             closeTab:function(e){//关闭页签
                 var index=e.target.getAttribute('data-index');
                 var pageLabelBox=this._data.pageLabelBox;
                 pageLabelBox.splice(index,1)
-            }
+            },
+            show:function(e){
+                var pageLabelBox=this._data.pageLabelBox;
+                var len=pageLabelBox.length;
+                var index=e.target.getAttribute('data-index');
+                for(var i=0;i<len;i++){
+                    var boxItem=this._data.pageLabelBox[i];
+                    if(index==i){
+                        
+                        break;
+                    }else{this._data.isActive=false;}
+                };
+                
+            },
+            
          }
 })

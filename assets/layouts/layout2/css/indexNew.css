@@ -26,6 +26,13 @@
  .page-header.navbar .search-form .input-group .input-group-btn{
     height: 36px;
 }
+.page-sidebar .page-sidebar-menu .sub-menu li{
+    cursor: pointer;
+}
+
+.page-header-fixed .page-container{
+    background-color: #26344b;
+}
 .page-header.navbar .search-form.search-form-expanded{
     margin-top: 19px;
     background-color: #f2f2f2;
@@ -38,6 +45,7 @@
 .page-header.navbar .top-menu .navbar-nav>li.dropdown>.dropdown-toggle>i.fa-commenting-o{
     font-size: 26px;
     color: #000;
+    margin-top: -6px;
 }
 .page-header.navbar .search-form .input-group .input-group-btn .btn.submit{
     margin-left: 0;
@@ -90,6 +98,9 @@ i.userQuestion{
     display: block;
     margin-top: 12px;
 }
+.page-header.navbar .top-menu .navbar-nav>li.dropdown>.dropdown-toggle:last-child{
+    padding-right: 16px!important;
+}
 .page-header.navbar .page-logo>a small{
     font-weight: 400;
     font-size: 12px;
@@ -104,7 +115,7 @@ i.userQuestion{
 
 
 @media (min-width: 992px){
-    .page-sidebar-closed.page-sidebar-closed-hide-logo.page-boxed .page-header.navbar .page-logo{
+    .page-sidebar-closed.page-sidebar-closed-hide-logo .page-header.navbar .page-logo{
         width: 195px;
         padding-left: 20px;
         padding-right: 20px;
@@ -190,39 +201,6 @@ i.userQuestion{
 .page-sidebar .page-sidebar-menu li>a>.arrow:before, .page-sidebar-closed.page-sidebar-fixed .page-sidebar:hover .page-sidebar-menu li>a>.arrow:before{
     margin-top: -46px;
 }
-.page-content ul{
-    width: 100%;
-    height: 29px;       
-}
-.page-content ul li{
-    position: relative;
-    float: left;
-    list-style: none;
-    margin-right: 10px;
-    padding: 5px 15px;
-    background-color: #fff;
-}
-.page-content ul li a{
-    color: #000;
-    font-size: 12px;
-}
-.page-content ul li a:focus,.page-content ul li a:hover{
-    text-decoration: none;
-}
-.page-content ul li.indexBtn a{
-    color: #17C4BB;
-}
-.page-content ul li i{
-    position: absolute;
-    top: -4px;
-    right: -4px; 
-}
-.page-content ul>li:first-child i{
-    display: none;
-}
-.page-content ul li i:hover{
-    color: #17C4BB;
-}
 .router-active{
     color: #17C4BB!important;
 }
@@ -233,4 +211,9 @@ body.page-boxed,body{
 .page-boxed {
     background-color: #fff!important;
 }
+}
+
+.el-table__row input[disabled]{
+    background: none;
+    border: none;
 }
