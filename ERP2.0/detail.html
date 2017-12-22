@@ -20,7 +20,9 @@
         　　:-moz-placeholder {color:#999;}
         　　::-moz-placeholder {color:#999;}
         　　:-ms-input-placeholder {color:#999;}
-
+            .detailForm{
+                margin-top: 15px;
+            }
             .detailForm .row{
                 margin-bottom: 17px;
             }
@@ -184,7 +186,7 @@
                             <label>上级业务单元</label>
                             <template>
                                 <el-select v-model="valueHigherUnit">
-                                    <el-option v-for="item in higherUnit" :label="item.label" :value="item.valueHigherUnit">
+                                    <el-option v-for="item in higherUnit" :key="item.valueHigherUnit" :label="item.label" :value="item.valueHigherUnit">
                                     </el-option>
                                 </el-select>
                             </template>
@@ -197,7 +199,7 @@
                                     <label>启用月份</label>
                                     <template>
                                         <el-select v-model="valueMonth">
-                                            <el-option v-for="item in month" :label="item.label" :value="item.valueMonth">
+                                            <el-option v-for="item in month" :key="item.valueMonth" :label="item.label" :value="item.valueMonth">
                                             </el-option>
                                         </el-select>
                                     </template>
@@ -205,13 +207,13 @@
                             </div>
                             <div class="col-md-3"><div class="bgcolor col-md-12"><label>本位币种</label><template>
                                     <el-select v-model="valueMoney">
-                                        <el-option v-for="item in money" :label="item.label" :value="item.valueMoney">
+                                        <el-option v-for="item in money" :key="item.valueMoney" :label="item.label" :value="item.valueMoney">
                                         </el-option>
                                     </el-select>
                                 </template></div></div>
                             <div class="col-md-3"><div class="bgcolor col-md-12"><label>所属公司</label><template>
                                     <el-select v-model="valueCompany">
-                                        <el-option v-for="item in company" :label="item.label" :value="item.valueCompany">
+                                        <el-option v-for="item in company" :key="item.valueCompany" :label="item.label" :value="item.valueCompany">
                                         </el-option>
                                     </el-select>
                                 </template></div></div>
@@ -221,7 +223,7 @@
                             <div class="col-md-3"><div class="bgcolor col-md-12"><label>备注</label><input type="text" class="formComponent" value="无" placeholder="备注"></div></div>
                             <div class="col-md-3"><div class="bgcolor col-md-12"><label>启用状态</label><template>
                                     <el-select v-model="valueState">
-                                        <el-option v-for="item in state" :label="item.label" :value="item.valueState">
+                                        <el-option v-for="item in state" :key="item.valueState" :label="item.label" :value="item.valueState">
                                         </el-option>
                                     </el-select>
                                 </template></div></div>  
