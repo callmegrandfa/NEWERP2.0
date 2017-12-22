@@ -63,17 +63,15 @@
             <!-- 基础资料表单开始 -->
             <div style="display:flex;align-items:flex-start;">
                 <div style="width: 15%;display:inline-block">
-                        <div class="tree-container">
+                    <div class="tree-container">
+                        <ul>
+                            <li v-for='item in companyTree'>{{item.big}}
                                 <ul>
-                                    <li>Root node 1
-                                        <ul>
-                                            <li>Child node 1</li>
-                                            <li><a href="#">Child node 2</a></li>
-                                        </ul>
-                                    </li>
-                                    <li>Root node 2</li>
+                                    <li v-for='items in item.small'>{{items}}</li>
                                 </ul>
-                            </div>
+                            </li>
+                        </ul>
+                    </div>
                 </div>
                 <div style="width: 85%;display:inline-block">
                     <el-table :data="tableData" border style="width: 100%">
@@ -188,14 +186,10 @@
             
                         <ul  class="data-ul col-md-8 row" style="list-style:none">
                             <li v-for='item in alreadyDo'>
-                                <div class="select-logo" 
-                                     :class="{'is-select':isChoose,'no-select':noChoose}" 
-                                     @click='changeChoose(index)'>
-                                    <img src="..\assets\layouts\layout2\img\nike.png"/>
-                                </div>
+                                <el-checkbox v-model="item.status" ></el-checkbox>
             
                                 <div class="status-ready">
-                                    <span>{{item}}</span>
+                                    <span>{{item.name}}</span>
                                 </div>
                             </li>
                         </ul>
@@ -207,22 +201,11 @@
                     </div>
             
                     <ul  class="data-ul col-md-8 row" style="list-style:none">
-                        <li>
-                            <div class="select-logo is-select">
-                                <img src="..\assets\layouts\layout2\img\nike.png"/>
-                            </div>
+                        <li v-for='item in businessStatus'>
+                            <el-checkbox v-model="item.status" ></el-checkbox>
         
                             <div class="status-ready">
-                                <span>已XX</span>
-                            </div>
-                        </li>
-                        <li>
-                            <div class="select-logo is-select">
-                                <img src="..\assets\layouts\layout2\img\nike.png"/>
-                            </div>
-        
-                            <div class="status-ready">
-                                <span>已XX</span>
+                                <span>{{item.name}}</span>
                             </div>
                         </li>
                     </ul>
@@ -385,6 +368,13 @@
             <script src="../assets/layouts/layout2/scripts/shortData.js" type="text/javascript"></script>
             <script>
                 $(function () { $('.tree-container').jstree(); });
+                //获取浏览器高度
+                var win_height=$(window).height();
+                //主体部分高度
+                var con_height=win_height-50;
+                $(function(){
+                    $('.high-search-container').css({'height':con_height,'overflow':'hidden'})
+                });               
             </script>
             
     </body>
