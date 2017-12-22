@@ -9,14 +9,30 @@ const vm=new Vue({
 			isChoose:true,
 			noChoose:false,
 			inputIndex:'',
-			alreadyDo:['已审核','已送审','已结案','已作废','已审核','已送审','已结案','已作废','已审核','已送审','已结案','已作废'],
-			companyTree:[{
-				C1:[{
+			alreadyDo:[{name:'已审核',status:true},
+					   {name:'已送审',status:true},
+					   {name:'已结案',status:true},
+					   {name:'已作废',status:false},
+					   {name:'已审核',status:false},
+					   {name:'已送审',status:false}],
 
-				}]
-			}],
+			businessStatus:[{name:'已生成',status:true},
+							{name:'未生成',status:true}],	
+
+			companyTree:[{
+				big:'上级1',
+				small:['下级1','下级2','下级3','下级4']
+				},{
+					big:'上级2',
+					small:['下级1','下级2','下级3','下级4']
+				},{
+					big:'上级3',
+					small:['下级1','下级2','下级3','下级4']
+				}
+			],
 			tableData: [{
 				sequence: '1',
+				a:'序号',
 				planCode: 'A001',
 				planName: '哈哈',
 				remark:'12',
@@ -126,11 +142,6 @@ const vm=new Vue({
 			let self = this;
 			self.week2 = false;
 		},
-		changeChoose:function(index){
-			let self = this;
-			self.inputIndex == index;
-			self.isChoose = !self.isChoose;
-			self.noChoose = !self.noChoose;
-		},
+		
 	},
 });
