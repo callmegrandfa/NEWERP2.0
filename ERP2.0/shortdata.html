@@ -82,7 +82,7 @@
                         <el-table-column prop="planName" label="班次方案名称"></el-table-column>
                         <el-table-column prop="remark" label="备注">
                             <template scope="scope">
-                                <input  type="text" :disabled="scope.$index!=isEdit"/>
+                                <input  type="text" :disabled="scope.$index!=isEdit" v-on:blur="finishEdit(scope.$index)"/>
                             </template>
                         </el-table-column>
                         <el-table-column prop="ifAllow" label="允许使用">
@@ -93,16 +93,16 @@
                         <el-table-column prop="updateDate" label="修改时间"></el-table-column>
                         <el-table-column label="操作">
                             <template slot-scope="scope">
-                                <el-button v-on:click="handleEdit(scope.$index)" type="text" size="small">修改</el-button>
-                                <!-- <el-button v-show='scope.$index==isEdit' v-on:click="handleSave()" type="text" size="small">保存</el-button>  -->
+                                <el-button v-on:click="handleEdit(scope.$index)" type="text"  size="small">修改</el-button>
+                                <!-- <el-button v-show='scope.$index==ifSave' v-on:click="handleSave(scope.$index)" type="text" size="small">保存</el-button>  -->
                                 <el-button v-on:click="handleDelete(scope.$index)" type="text" size="small">删除</el-button>
                             </template>
                         </el-table-column>
-                    </el-table>    
+                    </el-table> 
+                    <el-pagination class="text-right mt-10" background layout="total, prev, pager, next"  :page-count="totalPage" v-on:current-change="handleCurrentChange"></el-pagination>   
                 </div>
             </div>
             <!-- 基础资料表单结束 -->
-
             <!-- 高級搜索開始 -->
             <div class="high-search-container" v-if='highSearchShow'>
                 <ul class="search-ul">
