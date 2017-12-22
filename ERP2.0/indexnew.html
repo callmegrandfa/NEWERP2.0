@@ -19,8 +19,6 @@
         <link href="../assets/layouts/layout2/css/layout.min.css" rel="stylesheet" type="text/css" />
         <link href="../assets/layouts/layout2/css/themes/blue.min.css" rel="stylesheet" type="text/css" id="style_color" />
         <link href="../assets/layouts/layout2/css/indexNew.css" rel="stylesheet" type="text/css"> 
-        <link href="../assets/layouts/layout2/css/common.css" rel="stylesheet" type="text/css">
-        <link href="../assets/layouts/layout2/css/shortData.css" rel="stylesheet" type="text/css">         
     </head>
     <body class="page-header-fixed page-sidebar-closed-hide-logo page-container-bg-solid">
         <div id="app">
@@ -104,10 +102,14 @@
                         <!--左侧列表结束 -->
                 </div>      
           </div>   
-                
+          <div class="page-content-wrapper">
+            <!-- BEGIN CONTENT BODY -->
+            <div class="page-content" >
                 <!-- 基础资料-短开始 -->
                 <iframe id="iframe" name="main" src="shortdata.html" width="100%" allowtransparency="true"height="100%" frameborder="0" scrolling="no" style="overflow:visible;"></iframe>
                 <!-- 基础资料短-结束 -->
+            </div>
+          </div>
         
 
             <!-- 内容开始 -->     
@@ -137,7 +139,7 @@
             //主体部分高度
             var con_height=win_height-50;
             $(function(){
-                $('.page-container').css({'height':con_height,'overflow':'hidden'})
+                $('.page-content').css({'height':con_height,'overflow':'hidden'})
             });
             </script>            
     </body>
