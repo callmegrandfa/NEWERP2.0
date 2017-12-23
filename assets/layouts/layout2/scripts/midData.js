@@ -34,63 +34,81 @@ const vm=new Vue({
 				sequence: '1',
 				a:'序号',
 				planCode: 'A001',
-				planName: '哈哈',
+                planName: '哈哈',
+                planMoney:'0',
+                planNum:'0',
 				remark:'12',
 				ifAllow:true,
 				updateDate:'2017.12.20'
 				}, {
 				    sequence: '2',
 				    planCode: 'A002',
-				    planName: '哈哈',
+                    planName: '哈哈',
+                    planMoney:'0',
+                    planNum:'0',
 				    remark:'1234',
 				    ifAllow:false,
 				    updateDate:'2017.12.20'
 				}, {
 				    sequence: '3',
 				    planCode: 'A003',
-				    planName: '哈哈',
+                    planName: '哈哈',
+                    planMoney:'0',
+                    planNum:'0',
 				    remark:'faf',
 				    ifAllow:false,
 				    updateDate:'2017.12.20'
 				}, {
 				    sequence: '4',
 				    planCode: 'A004',
-				    planName: '哈哈',
+                    planName: '哈哈',
+                    planMoney:'0',
+                    planNum:'0',
 				    remark:'fasdg',
 				    ifAllow:true,
 				    updateDate:'2017.12.20'
 				}, {
 				    sequence: '5',
 				    planCode: 'A005',
-				    planName: '哈哈',
+                    planName: '哈哈',
+                    planMoney:'0',
+                    planNum:'0',
 				    remark:'fasdg',
 				    ifAllow:true,
 				    updateDate:'2017.12.20'
 				}, {
 				    sequence: '6',
 				    planCode: 'A006',
-				    planName: '哈哈',
+                    planName: '哈哈',
+                    planMoney:'0',
+                    planNum:'0',
 				    remark:'fasdg',
 				    ifAllow:true,
 				    updateDate:'2017.12.20'
 				}, {
 				    sequence: '7',
 				    planCode: 'A007',
-				    planName: '哈哈',
+                    planName: '哈哈',
+                    planMoney:'0',
+                    planNum:'0',
 				    remark:'fasdg',
 				    ifAllow:true,
 				    updateDate:'2017.12.20'
 				}, {
 				    sequence: '8',
 				    planCode: 'A008',
-				    planName: '哈哈',
+                    planName: '哈哈',
+                    planMoney:'0',
+                    planNum:'0',
 				    remark:'fasdg',
 				    ifAllow:true,
 				    updateDate:'2017.12.20'
 				}, {
 				    sequence: '9',
 				    planCode: 'A009',
-				    planName: '哈哈',
+                    planName: '哈哈',
+                    planMoney:'0',
+                    planNum:'0',
 				    remark:'fasdg',
 				    ifAllow:true,
 				    updateDate:'2017.12.20'
